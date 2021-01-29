@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educazione Civica Mario Capodanno</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+  <section>
+    <div class="circle"></div>
+    <header>
+     <a href="#" ><img src="./assets/logo.png" class="logo"></a>
+     <ul>
+         <li><a href="index.html">Home</a></li>
+         <li><a href="https://istitutocapirola.edu.it/">Istituto</a></li>
+         <li><a href="https://istitutocapirola.edu.it/">Fonti</a></li>
+     </ul>
+    </header>
+    <div class="content">
+        <div class="textBox">
+            <h2 id="myh2">Elaborato di <span>Educazione Civica</span></h2>
+            <p id="myp">Capodanno Mario  Classe 5A LSA  2020/2021</p>
+            <a id="mya" href="https://github.com/AzurCoddee?tab=repositories"><i class="fa fa-github"></i> SCOPRI DI PIÙ</a>
+        </div>
+     <div class="imgBox">
+        <img src="" class="bigIcon">
+     </div>
+    </div>
+    <ul class="thumb">
+       <li><img src="./assets/img1.svg" onclick="imgSlider('./assets/img1.svg');changeCircleColor('#D84654'); changeP('L’insieme di norme finalizzate a garantire un trattamento dei dati personali, svolto nel rispetto dei diritti e delle libertà fondamentali di ogni persona.','SCOPRI DI PIÙ'); changeH2('Privacy', '#D84654', '900', '#D84654','./assets/logoprivacy.png'); changeHref('privacy.html')"></li>
+       <li><img src="./assets/img2.svg" onclick="imgSlider('./assets/img2.svg');changeCircleColor('#eb7495'); changeP('La rete ormai è un’estensione del mondo reale. Ma quando reale e virtuale si incontrano, cosa succede alla nostra identità?','SCOPRI DI PIÙ'); changeH2('Identità Digitale', '#eb7495', '900', '#eb7495', './assets/logoid.png'); changeHref('id.html')"></li>
+       <li><img src="./assets/img3.svg" onclick="imgSlider('./assets/img3.svg');changeCircleColor('#FFB81F'); changeP('La rete è uno spazio virtuale dove gli utenti si incontrano e scambiano opinioni e tutti ben sappiamo che ciò che pensa la gente può fare la fortuna o meno di un prodotto o di una azienda.','SCOPRI DI PIÙ'); changeH2('Web Reputation', '#FFB81F', '900', '#FFB81F', './assets/logoweb.png'); changeHref('webreputation.html')"></li> 
+       <li><img src="./assets/img4.svg" onclick="imgSlider('./assets/img4.svg');changeCircleColor('#156FA2'); changeP('I siti che chiedono i dati personali li trattano nel pieno rispetto del regolamento europeo e spiegano l’uso che ne fanno in apposite informative sulla privacy.','SCOPRI DI PIÙ'); changeH2('Policy', '#156FA2', '900', '#156FA2', './assets/logopolicy.png'); changeHref('policy.html')"></li>    
+    </ul>
+  </section> 
+  
+  <script type="text/javascript">
+   function imgSlider(anything) {
+   document.querySelector('.bigIcon').src = anything; //funzione cambia immagine a seconda dell'icona selezionata//
+   }
+   function changeCircleColor(color) {
+    const circle = document.querySelector('.circle'); //cambio colore cerchio dello sfondo//
+    circle.style.background = color;
+   }
+
+   function changeP (anything, any) {
+    document.getElementById("myp").textContent= anything;
+    document.getElementById("mya").textContent= any; //cambio del testo nel paragrafo quando l'icona viene selezionata//
+   }
+
+   function changeH2(anything, any, thing, temp, doom) {       //cambio del logo, cambio del colore e del sottotitolo, cambio colore del tasto//
+    document.getElementById("myh2").textContent= anything;
+    document.getElementById("myh2").style.color= any;
+    document.getElementById("myh2").style.fontWeight= thing;
+    document.getElementById("mya").style.background = temp;
+    document.querySelector(".logo").src= doom;
+   }
+
+   function changeHref(bob) {                     //cambio della pagina a cui indirizza il tasto "Scopri di più"//
+    document.getElementById("mya").href= bob;
+   }
+  </script>
+</body>
+</html>
